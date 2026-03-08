@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine India - Future of Cleaning Solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #0066cc, #0099ff);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc, #0099ff);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0066cc;
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-content h3 {
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .product-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-card h3 {
+            color: #0066cc;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info strong {
+            color: #333;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #0066cc;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #0099ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0066cc;
+                padding: 1rem;
+                gap: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                padding: 0.5rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>✨ Shine India</h1>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Shine India</h1>
+        <div class="tagline">Future of Cleaning Solution</div>
+        <p>
+            Leading manufacturer of premium quality cleaning liquids and durable plastic bottles. 
+            We specialize in producing high-grade cleaning solutions and versatile plastic packaging 
+            to meet the diverse needs of businesses and consumers across India.
+        </p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🍶</div>
+                    <div class="product-content">
+                        <h3>Empty Plastic Bottles</h3>
+                        <p>
+                            High-quality, durable plastic bottles in various sizes and designs. 
+                            Perfect for packaging cleaning products, detergents, and industrial liquids. 
+                            Available in bulk quantities with customization options.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">⚗️</div>
+                    <div class="product-content">
+                        <h3>Cleaning Liquid Concentrates</h3>
+                        <p>
+                            Premium concentrated cleaning formulations for industrial and commercial use. 
+                            Cost-effective solutions that deliver exceptional cleaning power. 
+                            Eco-friendly formulas with superior performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🧴</div>
+                    <div class="product-content">
+                        <h3>Ready-to-Sell Cleaning Products</h3>
+                        <p>
+                            Complete range of ready-to-use cleaning products in attractive packaging. 
+                            From floor cleaners to multipurpose solutions, our products are retail-ready 
+                            and designed for immediate market distribution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Shine India</h2>
+            <div class="about-content">
+                <p>
+                    Shine India is a trusted manufacturer and supplier of premium cleaning chemicals and 
+                    plastic packaging bottles. With a commitment to quality and innovation, we serve businesses 
+                    across various industries with our comprehensive range of cleaning solutions and packaging materials. 
+                    Our state-of-the-art manufacturing facility ensures consistent product quality while maintaining 
+                    competitive pricing. We pride ourselves on delivering reliable products that meet the highest 
+                    standards of excellence, making us the preferred choice for businesses seeking quality cleaning 
+                    solutions and plastic packaging.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-info">
+                        <strong>Owner:</strong>
+                        <p>Mr. Rajeev Kumar Singh</p>
+                    </div>
+                    <div class="contact-info">
+                        <strong>Phone:</strong>
+                        <p>+91 9334893470</p>
+                    </div>
+                    <div class="contact-info">
+                        <strong>Email:</strong>
+                        <p>lightyear0055@gmail.com</p>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="tel:+919334893470" class="btn btn-primary">📞 Call</a>
+                        <a href="mailto:lightyear0055@gmail.com" class="btn btn-secondary">✉️ Email</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Our Location</h3>
+                    <div class="contact-info">
+                        <strong>Address:</strong>
+                        <p>BIT Mesra, Devi Darshan Road</p>
+                        <p>Ranchi, Jharkhand 835217</p>
+                        <p>India</p>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://maps.google.com/?q=BIT+Mesra+Ranchi+Jharkhand+835217" target="_blank" class="btn btn-primary">📍 View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Shine India</strong> - Future of Cleaning Solution</p>
+        <p>&copy; 2026 Shine India. All Rights Reserved.</p>
+        <p>Website Developed By <a href="mailto:lightyear0055@gmail.com">lightyear0055@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Add smooth scroll offset for fixed navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 60;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
